@@ -1,11 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomotimer</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="display heading">POMOTIMER</h1>
+    <div class="container">
+      <div class="timer">
+        <h2 id="timer-label">Session</h2>
+        <span id="time-left">25:00</span>
+      </div>
+      <div class="controls">
+        <button id="start_stop">Start/Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="length-controls">
+        <div class="session-control">
+          <h3 id="session-label">Session Length</h3>
+          <div class="control-row">
+            <button id="session-decrement">-</button>
+            <span id="session-length">25</span>
+            <button id="session-increment">+</button>
+          </div>
+        </div>
+        <div class="break-control">
+          <h3 id="break-label">Break Length</h3>
+          <div class="control-row">
+            <button id="break-decrement">-</button>
+            <span id="break-length">5</span>
+            <button id="break-increment">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <h2>History</h2>
+      <ul id="history-list"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
