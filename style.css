@@ -281,9 +281,16 @@ aside{
 }
 
 @media (max-width: 480px) {
+  body {
+  background: center url("/bg.jpg");
+  background-size: cover;
+
+  }
   .length-controls {
     flex-direction: column;
     gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
   }
   
   .controls {
