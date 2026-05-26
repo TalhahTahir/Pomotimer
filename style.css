@@ -80,10 +80,10 @@ body {
   filter: grayscale(80%) brightness(70%);
   animation: subtle-pulse 3.7s infinite ease-in-out;
   #timer-label{
-    font-size: 3.5rem;
+    font-size: 2.75rem;
   }
   #time-left {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -304,4 +304,5 @@ aside{
   .timer.break-mode #time-left {
     font-size: 2rem;
   }
+  
 }
