@@ -86,12 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
             isSession = false;
             timerLabel.textContent = 'Break';
             timeLeft = breakLength * 60;
+            document.querySelector('.timer').classList.add('break-mode');
           } else {
             // Break just ended
             addHistoryRecord('Break', breakLength);
             isSession = true;
             timerLabel.textContent = 'Session';
             timeLeft = sessionLength * 60;
+            document.querySelector('.timer').classList.remove('break-mode');
           }
           
           updateDisplay();
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionLengthDisplay.textContent = sessionLength;
     breakLengthDisplay.textContent = breakLength;
     timerLabel.textContent = 'Session';
+    document.querySelector('.timer').classList.remove('break-mode');
     
     updateDisplay();
   }

@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-image: url("/bg.JPG");
+  font-family: 'Poppins', -apple-system, sans-serif;
+  background-image: url("/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--text-main);
@@ -67,6 +67,24 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
+  transition: filter 0.5s ease;
+}
+
+@keyframes subtle-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.timer.break-mode {
+  filter: grayscale(80%) brightness(70%);
+  animation: subtle-pulse 3.7s infinite ease-in-out;
+  #timer-label{
+    font-size: 3.5rem;
+  }
+  #time-left {
+    font-size: 2.25rem;
+  }
 }
 
 #timer-label {
@@ -197,6 +215,8 @@ button:active {
   padding: 0;
   max-height: 150px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #afafaf66 transparent;
 }
 
 #history-list li {
@@ -210,4 +230,8 @@ button:active {
 
 #history-list li:last-child {
   border-bottom: none;
+}
+
+aside{
+    background: rgba(126, 126, 126, 0.15);
 }
