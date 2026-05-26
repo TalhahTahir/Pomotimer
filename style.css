@@ -235,3 +235,66 @@ button:active {
 aside{
     background: rgba(126, 126, 126, 0.15);
 }
+
+/* Responsiveness */
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Reorder items so the Timer shows first, then controls, then length controls */
+  .timer {
+    order: -1;
+    width: 200px;
+    height: 200px;
+  }
+  
+  #time-left {
+    font-size: 3.5rem;
+  }
+  
+  .controls {
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .controls button {
+    flex: 1;
+  }
+  
+  .length-controls {
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 0;
+  }
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .length-controls {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+  }
+  
+  .container {
+    padding: 1.5rem;
+  }
+
+  .timer.break-mode #time-left {
+    font-size: 2rem;
+  }
+}
